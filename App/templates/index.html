@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My To-Do App</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f9f9f9; }
+        h1 { color: #333; }
+        form { margin-bottom: 20px; }
+        input[type="text"] { padding: 8px; width: 300px; }
+        button { padding: 8px 12px; margin-left: 10px; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin-bottom: 10px; background: #fff; padding: 10px; border-radius: 5px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .flash { color: green; margin-bottom: 20px; }
+        a { color: red; text-decoration: none; margin-left: 10px; }
+    </style>
+</head>
+<body>
+    <h1>My Tasks</h1>
+
+    <form action="/add" method="post">
+        <input type="text" name="title" placeholder="New task" required>
+        <button type="submit">Add</button>
+    </form>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="flash">
+          {% for message in messages %}
+            <p>{{ message }}</p>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    <ul>
+        {% for task in tasks %}
+            <li>
+                {{ task.title }}
+                <a href="/delete/{{ task.id }}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
