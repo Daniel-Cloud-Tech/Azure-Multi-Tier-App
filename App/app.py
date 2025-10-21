@@ -17,6 +17,10 @@ class Task(db.Model):
     title = db.Column(db.String(100), nullable=False)
     completed = db.Column(db.Boolean, default=False)
 
+# ✅ Create tables if they don't exist
+with app.app_context():
+    db.create_all()
+
 @app.route('/')
 def index():
     tasks = Task.query.all()
@@ -42,3 +46,4 @@ def delete(id):
 
 if __name__ == '__main__':
     app.run(debug=True)
+
