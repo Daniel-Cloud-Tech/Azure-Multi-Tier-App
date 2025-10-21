@@ -1,6 +1,6 @@
 # 📝 Task List Web App on Azure
 
-A simple CRUD task list application built with Python and deployed to Azure App Service. The focus for this project was to gain hands-on experience with Azure App Service Plans.
+A simple CRUD task list application built with Python and deployed to Azure App Service. The focus for this project was to gain hands-on experience with Azure App Service.
 
 ---
 
@@ -56,7 +56,6 @@ The goal was to keep the app lightweight while exploring Azure deployment and in
 ## 🔐 Next Steps: Security & Scaling
 
 - Implement Azure App Gateway & Azure Firewall
-- Enable HTTPS-only traffic
 - Migrate to Azure SQL for scalable data tier
 - Add authentication via Azure AD or OAuth
 
