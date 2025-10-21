@@ -13,6 +13,8 @@ This web app allows users to:
 
 The goal was to keep the app lightweight while exploring Azure deployment and infrastructure setup.
 
+![Task List Web App](image.png)
+
 ---
 
 ## 🧱 Azure Deployment Steps
@@ -53,11 +55,12 @@ The goal was to keep the app lightweight while exploring Azure deployment and in
 
 ---
 
-## 🔐 Next Steps: Security & Scaling
+## 🔐 Next Steps
 
+- Redeploy using Terraform
 - Implement Azure App Gateway & Azure Firewall
-- Migrate to Azure SQL for scalable data tier
-- Add authentication via Azure AD or OAuth
+- Implement CI/CD pipline
+- Implement segmented data tier using Azure SQL
 
 ---
 
