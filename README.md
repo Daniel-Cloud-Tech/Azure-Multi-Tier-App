@@ -11,13 +11,11 @@ This web app allows users to:
 - View existing tasks
 - Delete completed tasks
 
-The goal was to keep the app lightweight while exploring Azure deployment and infrastructure setup.
-
 ![Task List Web App](image.png)
 
 ---
 
-## 🧱 Azure Deployment Steps
+## 🧱 Azure Portal Deployment Steps
 
 1. **Created a Resource Group**
    - All resources were placed in a single group for easy cleanup and management.
@@ -58,9 +56,9 @@ The goal was to keep the app lightweight while exploring Azure deployment and in
 ## 🔐 Next Steps
 
 - Redeploy using Terraform
+- Implement segmented data tier using Azure SQL
 - Implement Azure App Gateway & Azure Firewall
 - Implement CI/CD pipline
-- Implement segmented data tier using Azure SQL
 
 ---
 
